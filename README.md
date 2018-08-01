@@ -5,4 +5,55 @@
 [![License MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/qcoumes/gitcmd/blob/master/LICENSE)
 
 # django-http-method
-Provide a workaround to use different method than GET or POST inside HTML forms
+Provide a workaround to use different method than GET or POST inside HTML forms in django templates. Works only with Class Based View.
+
+## Installation
+From source code:
+
+    python setup.py install
+
+From pip:
+
+    pip install django-http-method
+
+## Usage
+
+##### Add *django_http_method* to your settings.INSTALLED_APPS
+
+```python
+INSTALLED_APPS = (
+    [...],
+    django_http_method,
+    [...],
+)
+```
+
+##### Add the mixin to a CBV
+
+```python
+from django.views.generic import View
+from django_http_method import HttpMethodMixin
+
+class TestView(HttpMethodMixin, View):
+	pass
+```
+
+##### In your template, load *http_method* and use *{% http_[method] %}* in your forms:
+```html
+{% load http_method %}
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_put %}
+    [...]
+    <button type="submit">Send a PUT request</button>
+</form>
+
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_patch %}
+    [...]
+    <button type="submit">Send a PATCH request</button>
+</form>
+```
