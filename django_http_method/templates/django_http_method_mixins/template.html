@@ -1,0 +1,55 @@
+{% load http_method %}
+
+{{ method }}
+
+<hr>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_get %}
+    <button type="submit">Send a GET request
+</form>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_post %}
+    <button type="submit">Send a POST request
+</form>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_head %}
+    <button type="submit">Send a HEAD request
+</form>
+<br>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_put %}
+    <button type="submit">Send a PUT request
+</form>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_delete %}
+    <button type="submit">Send a DELETE request
+</form>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_patch %}
+    <button type="submit">Send a PATCH request
+</form>
+<br>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_options %}
+    <button type="submit">Send a OPTIONS request
+</form>
+
+<form action="/" method="post">
+    {% csrf_token %}
+    {% http_trace %}
+    <button type="submit">Send a TRACE request
+</form>

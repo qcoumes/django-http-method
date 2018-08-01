@@ -1,0 +1,6 @@
+[run]
+source =
+    django_http_method
+
+omit =
+    *apps.py
