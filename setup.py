@@ -19,6 +19,8 @@ CLASSIFIERS = [
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
     'Framework :: Django',
+    'Framework :: Django :: 1.8',
+    'Framework :: Django :: 1.10',
     'Framework :: Django :: 1.11',
     'Framework :: Django :: 2.0',
 ]
@@ -32,6 +34,7 @@ setup(
     version='0.1.0',
     description='Provide a workaround to use different method from GET or POST inside HTML forms ',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Coumes Quentin',
     author_email='coumes.quentin@gmail.com',
     url='https://github.com/qcoumes/django-http-method',
