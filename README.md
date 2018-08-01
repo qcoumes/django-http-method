@@ -38,7 +38,7 @@ class TestView(HttpMethodMixin, View):
 	pass
 ```
 
-##### In your template, load *http_method* and use *{% http_[method] %}* in your forms:
+##### In your template, load *http_method* and use `{% http_[method] %}` in your forms:
 ```html
 {% load http_method %}
 
@@ -57,3 +57,5 @@ class TestView(HttpMethodMixin, View):
     <button type="submit">Send a PATCH request</button>
 </form>
 ```
+
+The corresponding method of your View will now be called. For instance, if `{% http_delete %}` was used, then `TestView.delete()` will be called.
