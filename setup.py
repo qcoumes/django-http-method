@@ -2,10 +2,7 @@
 import codecs
 import os
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
 
 
 CLASSIFIERS = [
@@ -40,5 +37,5 @@ setup(
     url='https://github.com/qcoumes/django-http-method',
     packages=['django_http_method', 'django_http_method.templatetags'],
     install_requires=[],
-    classifiers=CLASSIFIERS
+    classifiers=CLASSIFIERS,
 )

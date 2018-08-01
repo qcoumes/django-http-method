@@ -21,15 +21,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
             ],
         },
-        
     },
-
 ]
 
-MIDDLEWARE = []
+MIDDLEWARE = MIDDLEWARE_CLASSES = []
 
 ROOT_URLCONF = 'tests.urls'
-
 
 # Database
 DATABASES = {}

@@ -46,7 +46,4 @@ install:
     - pip install tox-travis
     - pip install coveralls
   
-script: "coverage run manage.py test"
-
-after_success:
-- coveralls
+script: tox

@@ -1,5 +1,6 @@
 from django.http import HttpResponseNotAllowed
 
+
 class HttpMethodMixin:
     allowed = ['GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'PATCH', 'OPTIONS', 'TRACE']
     
@@ -9,10 +10,10 @@ class HttpMethodMixin:
         
         if method:
             if method not in self.allowed:
-                return HttpResponseNotAllowed(self.allowed, "Method Not Allowed (" + method + "): /")
+                return HttpResponseNotAllowed(self.allowed, "Method Not Allowed (" + method + ")")
             
             self.request.method = method
             self.request.META['REQUEST_METHOD'] = method
-            setattr(self.request, method , data)
+            setattr(self.request, method, data)
         
         return super(HttpMethodMixin, self).dispatch(*args, **kwargs)

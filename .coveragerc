@@ -3,4 +3,5 @@ source =
     django_http_method
 
 omit =
+    *tests*
     *apps.py

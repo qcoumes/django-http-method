@@ -1,7 +1,6 @@
 from django.test import SimpleTestCase, Client
 
 
-
 class WithoutMixinTestCase(SimpleTestCase):
 
     def test_get(self):
@@ -35,7 +34,6 @@ class WithoutMixinTestCase(SimpleTestCase):
     def test_trace(self):
         response = Client().trace('/')
         self.assertContains(response, "Received a TRACE", status_code=200)
-
 
 
 class GetMethodTestCase(SimpleTestCase):
@@ -75,7 +73,6 @@ class GetMethodTestCase(SimpleTestCase):
     def test_get_trace(self):
         response = Client().get('/', {'_method': 'TRACE'})
         self.assertContains(response, "Received a TRACE", status_code=200)
-
 
 
 class PostMethodTestCase(SimpleTestCase):
