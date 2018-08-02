@@ -59,4 +59,4 @@ class TestView(HttpMethodMixin, View):
 </form>
 ```
 
-The corresponding method of your View will now be called. For instance, if `{% http_delete %}` was used, then `TestView.delete()` will be called.
+The corresponding method of your View will now be called. For instance, if `{% http_put %}` was used, then `TestView.put()` will be called and any request parameter will be put in `self.request.PUT`.
