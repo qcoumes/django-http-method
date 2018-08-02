@@ -59,4 +59,4 @@ class TestView(HttpMethodMixin, View):
 </form>
 ```
 
-The corresponding method of your View will now be called. For instance, if `{% http_put %}` was used, then `TestView.put()` will be called and any request parameter will be in `self.request.PUT`.
+The corresponding method of your View will now be called. For instance, if `{% http_put %}` was used, then `TestView.put()` will be called and any request parameter will be in `request.PUT`.
