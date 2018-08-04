@@ -27,11 +27,12 @@ CLASSIFIERS = [
 
 dirname = os.path.dirname(__file__)
 
-long_description = codecs.open(os.path.join(dirname, 'README.md'), encoding='utf-8').read()
+long_description = (codecs.open(os.path.join(dirname, 'README.md'), encoding='utf-8').read() + '\n'
+                  + codecs.open(os.path.join(dirname, 'CHANGELOG.md'), encoding='utf-8').read() ) 
 
 setup(
     name='django-http-method',
-    version="0.2.2",
+    version="0.3.0",
     description='Provide a workaround to use different method from GET or POST inside HTML forms ',
     long_description=long_description,
     long_description_content_type='text/markdown',
