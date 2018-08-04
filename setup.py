@@ -28,7 +28,7 @@ CLASSIFIERS = [
 dirname = os.path.dirname(__file__)
 
 long_description = (codecs.open(os.path.join(dirname, 'README.md'), encoding='utf-8').read() + '\n'
-                  + codecs.open(os.path.join(dirname, 'CHANGELOG.md'), encoding='utf-8').read() ) 
+                    + codecs.open(os.path.join(dirname, 'CHANGELOG.md'), encoding='utf-8').read())
 
 setup(
     name='django-http-method',
