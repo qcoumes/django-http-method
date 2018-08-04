@@ -12,6 +12,7 @@ class HttpMethodMixin:
             if method not in self.allowed:
                 return HttpResponseNotAllowed(self.allowed, "Method Not Allowed (" + method + ")")
             
+            del data['_method']
             self.request.method = method
             self.request.META['REQUEST_METHOD'] = method
             setattr(self.request, method, data)
