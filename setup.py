@@ -32,7 +32,7 @@ long_description = (codecs.open(os.path.join(dirname, 'README.md'), encoding='ut
 
 setup(
     name='django-http-method',
-    version="0.3.2",
+    version="0.4.0",
     description='Provide a workaround to use different method from GET or POST inside HTML forms ',
     long_description=long_description,
     long_description_content_type='text/markdown',
