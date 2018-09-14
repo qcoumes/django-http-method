@@ -1,6 +1,6 @@
 {% load http_method %}
 
-{{ method }}
+{{ method }} {% if params %}with params: {{params}}{% endif %}
 
 <hr>
 

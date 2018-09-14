@@ -9,22 +9,34 @@ class TestView(HttpMethodMixin, View):
     template_name = 'django_http_method_mixins/template.html'
     
     def get(self, *args, **kwargs):
-        return render(self.request, self.template_name, {'method': 'Received a GET'})
+        return render(self.request, self.template_name, {
+            'method': 'Received a GET',
+            'params': self.request.GET.dict(),
+        })
     
     def post(self, *args, **kwargs):
-        return render(self.request, self.template_name, {'method': 'Received a POST'})
+        return render(self.request, self.template_name, {
+            'method': 'Received a POST',
+            'params': self.request.POST.dict(),
+        })
     
     def head(self, *args, **kwargs):
         return render(self.request, self.template_name, {'method': 'Received a HEAD'})
     
     def put(self, *args, **kwargs):
-        return render(self.request, self.template_name, {'method': 'Received a PUT'})
+        return render(self.request, self.template_name, {
+            'method': 'Received a PUT',
+            'params': self.request.PUT.dict(),
+        })
     
     def delete(self, *args, **kwargs):
         return render(self.request, self.template_name, {'method': 'Received a DELETE'})
     
     def patch(self, *args, **kwargs):
-        return render(self.request, self.template_name, {'method': 'Received a PATCH'})
+        return render(self.request, self.template_name, {
+            'method': 'Received a PATCH',
+            'params': self.request.PATCH.dict(),
+        })
 
     def options(self, *args, **kwargs):
         return render(self.request, self.template_name, {'method': 'Received a OPTIONS'})
