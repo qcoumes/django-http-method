@@ -36,7 +36,17 @@ from django.views.generic import View
 from django_http_method import HttpMethodMixin
 
 class TestView(HttpMethodMixin, View):
-	pass
+	
+	def get(self, request):
+		pass
+	
+	def delete(self, request):
+		pass
+	
+	def put(self, request):
+		pass
+	
+	[...]
 ```
 
 ##### In your template, load *http_method* and use `{% http_[method] %}` in your forms:
