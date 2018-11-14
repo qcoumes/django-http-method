@@ -6,7 +6,7 @@ from setuptools import setup
 
 
 CLASSIFIERS = [
-    'Development Status :: 4 - Beta',
+    'Development Status :: 5 - Production/Stable',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: MIT License',
     'Natural Language :: English',
@@ -18,11 +18,13 @@ CLASSIFIERS = [
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
     'Framework :: Django',
     'Framework :: Django :: 1.8',
     'Framework :: Django :: 1.10',
     'Framework :: Django :: 1.11',
     'Framework :: Django :: 2.0',
+    'Framework :: Django :: 2.1',
 ]
 
 dirname = os.path.dirname(__file__)
@@ -32,7 +34,7 @@ long_description = (codecs.open(os.path.join(dirname, 'README.md'), encoding='ut
 
 setup(
     name='django-http-method',
-    version="0.4.1",
+    version="1.0.0",
     description='Provide a workaround to use different method from GET or POST inside HTML forms ',
     long_description=long_description,
     long_description_content_type='text/markdown',

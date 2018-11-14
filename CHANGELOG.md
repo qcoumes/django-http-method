@@ -2,6 +2,10 @@
 
 # Changelog
 
+#### 1.0.0
+
+* Initial release for python3.4+ and django1.8, 1.10, 1.11 and 2.0+ 
+
 #### 0.4.0
 
 * Will now search for parameters in body for methods PUT and PATCH
