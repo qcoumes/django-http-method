@@ -1,6 +1,6 @@
 dist: xenial
 
-sudo: false
+sudo: required
 
 language: python
 
