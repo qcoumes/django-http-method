@@ -13,7 +13,7 @@ class HttpMethodMixin:
         elif self.request.method == "GET":
             data = self.request.GET
         elif self.request.method in ["PATCH", "PUT"]:
-            data_dict = yaml.load(self.request.body.decode())
+            data_dict = yaml.safe_load(self.request.body.decode())
             data = QueryDict(urlencode(data_dict) if data_dict else {})
         else:
             data = QueryDict()
