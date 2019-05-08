@@ -3,6 +3,11 @@
 # Changelog
 
 
+#### 1.0.2
+
+* Added `pyaml` to setup requirement.
+
+
 #### 1.0.1
 
 * Now use `yaml.safe_load()` instead of `yaml.load()`

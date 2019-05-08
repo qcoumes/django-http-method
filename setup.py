@@ -34,7 +34,7 @@ long_description = (codecs.open(os.path.join(dirname, 'README.md'), encoding='ut
 
 setup(
     name='django-http-method',
-    version="1.0.1",
+    version="1.0.2",
     description='Provide a workaround to use different method from GET or POST inside HTML forms ',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -42,6 +42,6 @@ setup(
     author_email='coumes.quentin@gmail.com',
     url='https://github.com/qcoumes/django-http-method',
     packages=['django_http_method', 'django_http_method.templatetags'],
-    install_requires=[],
+    install_requires=['pyyaml'],
     classifiers=CLASSIFIERS,
 )
