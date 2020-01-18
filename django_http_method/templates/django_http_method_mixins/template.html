@@ -1,55 +1,79 @@
 {% load http_method %}
 
-{{ method }} {% if params %}with params: {{params}}{% endif %}
+{{ method }} request{% if params %} with params:
+<ul>
+    {% for k,v in params.items %}
+    <li>{{ k }} : {{ v }}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
 
 <hr>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_get %}
-    <button type="submit">Send a GET request
+    <input type="text" name="hidden" value="text" hidden>
+    <button type="submit">Send a GET request</button>
 </form>
+
+<br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_post %}
-    <button type="submit">Send a POST request
+    <input type="text" name="hidden" value="text" hidden>
+    <button type="submit">Send a POST request</button>
 </form>
+
+<br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_head %}
-    <button type="submit">Send a HEAD request
+    <button type="submit">Send a HEAD request</button>
 </form>
+
 <br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_put %}
-    <button type="submit">Send a PUT request
+    <input type="text" name="hidden" value="text" hidden>
+    <button type="submit">Send a PUT request</button>
 </form>
+
+<br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_delete %}
-    <button type="submit">Send a DELETE request
+    <input type="text" name="hidden" value="text" hidden>
+    <button type="submit">Send a DELETE request</button>
 </form>
+
+<br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_patch %}
-    <button type="submit">Send a PATCH request
+    <input type="text" name="hidden" value="text" hidden>
+    <button type="submit">Send a PATCH request</button>
 </form>
+
 <br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_options %}
-    <button type="submit">Send a OPTIONS request
+    <button type="submit">Send a OPTIONS request</button>
 </form>
+
+<br>
 
 <form action="/" method="post">
     {% csrf_token %}
     {% http_trace %}
-    <button type="submit">Send a TRACE request
+    <button type="submit">Send a TRACE request</button>
 </form>

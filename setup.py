@@ -15,16 +15,18 @@ CLASSIFIERS = [
     'Topic :: Internet',
     'Environment :: Web Environment',
     'Programming Language :: Python',
-    'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
     'Framework :: Django',
     'Framework :: Django :: 1.8',
     'Framework :: Django :: 1.10',
     'Framework :: Django :: 1.11',
     'Framework :: Django :: 2.0',
     'Framework :: Django :: 2.1',
+    'Framework :: Django :: 2.2',
+    'Framework :: Django :: 3.0',
 ]
 
 dirname = os.path.dirname(__file__)
@@ -34,7 +36,7 @@ long_description = (codecs.open(os.path.join(dirname, 'README.md'), encoding='ut
 
 setup(
     name='django-http-method',
-    version="1.0.2",
+    version="1.1.0",
     description='Provide a workaround to use different method from GET or POST inside HTML forms ',
     long_description=long_description,
     long_description_content_type='text/markdown',

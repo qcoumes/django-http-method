@@ -1,5 +1,7 @@
 import django
 
+DEBUG = True
+
 SECRET_KEY = 'TERCES'
 
 INSTALLED_APPS = [
