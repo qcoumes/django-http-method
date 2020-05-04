@@ -3,6 +3,10 @@
 # Changelog
 
 
+#### 1.1.1
+
+* Now use Github action for testing and deployment
+
 ### 1.1.0
 
 * Dropped python 3.4 support
