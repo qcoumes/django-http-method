@@ -1,0 +1,52 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+      - '*.*.*'
+
+  pull_request:
+    branches:
+      - dev
+      - master
+      - '*.*.*'
+
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ 3.5, 3.6, 3.7, 3.8, 3.9 ]
+        django-version: [ 18, 110, 111, 20, 21, 22, 30, 31 ]
+        exclude:
+          - python-version: 3.5
+            django-version: 30
+          - python-version: 3.5
+            django-version: 31
+
+    name: Py${{ matrix.python-version }} | Django${{ matrix.django-version }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@master
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Tox and any other packages
+        run: |
+          pip install tox
+      - name: Run Tox
+        run: tox -e py-django${{ matrix.django-version }}
+
+      - name: Upload coverage to Codecov
+        if: matrix.python-version == 3.9 && matrix.django-version == 31
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage.xml
