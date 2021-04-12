@@ -3,6 +3,11 @@
 # Changelog
 
 
+#### 1.2.0
+
+* Dropped Django 1.X support.
+* Now supports Django 3.2.
+
 #### 1.1.1
 
 * Now use Github action for testing and deployment

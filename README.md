@@ -3,7 +3,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/qcoumes/django-http-method/badge)](https://www.codefactor.io/repository/github/qcoumes/django-http-method)
 [![PyPI Version](https://badge.fury.io/py/django-http-method.svg)](https://badge.fury.io/py/django-http-method)
 [![Python 3.5+](https://img.shields.io/badge/python-3.5+-brightgreen.svg)](#)
-[![Django 1.8, 1.10+, 2+, 3+](https://img.shields.io/badge/django-1.8%2C%201.10+%2C%20%202.0+%2C%203.0+-brightgreen.svg)](#)
+[![Django 2+, 3+](https://img.shields.io/badge/django-2.0+%2C%203.0+-brightgreen.svg)](#)
 [![License MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/qcoumes/django-http-method/blob/master/LICENSE)
 
 # django-http-method
