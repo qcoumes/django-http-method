@@ -3,6 +3,11 @@
 # Changelog
 
 
+#### 1.2.1
+
+* Renamed template directory to `django_http_method`.
+
+
 #### 1.2.0
 
 * Dropped Django 1.X support.
